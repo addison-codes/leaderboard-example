@@ -1,9 +1,17 @@
-
-const EventName = () => {
+const EventName = ({ name, onNameChange }) => {
   return (
-    <div className="mx-auto">
-      <label htmlFor="eventName" className="m-4" placeholder="Enter Event Name">Event Name</label>
-      <input label='Event Name' name='eventName'></input>
+    <div className="text-center mt-20">
+      <label htmlFor="eventName" className="mr-4 text-xl">
+        Event Name:
+      </label>
+      <input
+        label="Event Name"
+        name="eventName"
+        placeholder="Enter Event Name"
+        value={name}
+        onChange={onNameChange}
+        className="p-2 rounded"
+      />
     </div>
   )
 }
